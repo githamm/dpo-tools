@@ -57,13 +57,24 @@
     <div class="row">
         <div class="medium-12 columns">
             <h3>Chart.js</h3>
-            <p><span style="font-weight: bold">Use </span>Responsive charts to add to non-NGPS web page</p>
-            <p><span style="font-weight: bold">GitHub </span><a href=""
+            <p><span style="font-weight: bold">Use </span>Responsive charts to add to non-NGPS web page (but can be added to NGPS via iframe &mdash; code below) / <a href="http://www.thecannabist.co/2015/02/12/colorado-marijuana-sales-2014-700-million/27565/">Live example</a></p>
+            <p><span style="font-weight: bold">Types </span><a href="http://extras.denverpost.com/frameworks/charts/samples/bar.html">Bar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/line.html">Line</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/doughnut.html">Doughnut</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/pie.html">Pie</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/polar-area.html">Polar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/radar.html">Radar</a></p>
+            <p><span style="font-weight: bold">GitHub </span><a href="#">Something</a></p>
             <p><span style="font-weight: bold">Documentation </span><a href="http://www.chartjs.org/">chartjs.org</a></p>
-            <code>
-                  &lt;div class=&quot;medium-12 columns&quot;&gt;<br/>            &lt;h3&gt;Chart.js&lt;/h3&gt;<br/>            &lt;p&gt;&lt;span style=&quot;font-weight: bold&quot;&gt;Use &lt;/span&gt;Responsive charts to add to non-NGPS web page&lt;/p&gt;<br/>            &lt;p&gt;&lt;span style=&quot;font-weight: bold&quot;&gt;Documentation &lt;/span&gt;&lt;a href=&quot;http://www.chartjs.org/&quot;&gt;chartjs.org&lt;/a&gt;&lt;/p&gt;
-        </code>
-
+            <p><span style="font-weight: bold">Iframe code example</span>
+                <code>
+                &lt;iframe height=&quot;400&quot; width=&quot;654&quot; frameBorder=&quot;0&quot; src=&quot;http://URLTOCHART&quot;&gt;&lt;/iframe&gt;
+            </code>
+            <ul class="accordion" data-accordion>
+                <li class="accordion-navigation">
+                   <a href="#panel1a">Code example</a>
+                   <div id="panel1a" class="content active">
+                     <pre>
+        &lt;!doctype html&gt;<br/>&lt;html&gt;<br/> &lt;head&gt;        <br/>       &lt;!-- page title in line below --&gt;<br/>        &lt;title&gt;Bar Chart&lt;/title&gt;<br/>       &lt;script src=&quot;http://extras.denverpost.com/frameworks/charts/chart.js&quot;&gt;&lt;/script&gt;<br/>  &lt;/head&gt;<br/>  &lt;body&gt;<br/>       &lt;div style=&quot;width: 100%&quot;&gt;<br/>          &lt;canvas id=&quot;canvas&quot; height=&quot;350&quot; width=&quot;600&quot;&gt;&lt;/canvas&gt;<br/>       &lt;/div&gt;<br/><br/>  &lt;script&gt;<br/> var barChartData = {<br/>       // Enter labels for horizontal axis<br/>        labels : [&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&quot;,&quot;May&quot;,&quot;June&quot;,&quot;July&quot;],<br/>     datasets : [<br/>           {<br/>              fillColor : &quot;rgba(72,99,160,0.5)&quot;, /* bar color */<br/>               strokeColor : &quot;rgba(72,99,160,0.8)&quot;, /* bar border color */<br/>              highlightFill: &quot;rgba(72,99,160,0.75)&quot;, /* bar color on hover/click */<br/>                highlightStroke: &quot;rgba(72,99,160,1)&quot;, /* bar border color on hover/click */<br/>              data : [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;,&quot;7&quot;,&quot;9&quot;,&quot;11&quot;,&quot;13&quot;] /* data */<br/>            },<br/>         // copy and paste above code for more bars; last set has no comma<br/>          {<br/>              fillColor : &quot;rgba(161,72,99,0.5)&quot;,<br/>               strokeColor : &quot;rgba(161,72,99,0.8)&quot;,<br/>             highlightFill : &quot;rgba(161,72,99,0.75)&quot;,<br/>              highlightStroke : &quot;rgba(161,72,99,1)&quot;,<br/>               data : [&quot;2&quot;,&quot;4&quot;,&quot;6&quot;,&quot;8&quot;,&quot;10&quot;,&quot;12&quot;,&quot;14&quot;]<br/>          },<br/>         {<br/>              fillColor : &quot;rgba(99,161,72,0.5)&quot;,<br/>               strokeColor : &quot;rgba(99,161,72,0.8)&quot;,<br/>             highlightFill : &quot;rgba(99,161,72,0.75)&quot;,<br/>              highlightStroke : &quot;rgba(99,161,72,1)&quot;,<br/>               data : [&quot;3&quot;,&quot;5&quot;,&quot;7&quot;,&quot;9&quot;,&quot;11&quot;,&quot;13&quot;,&quot;15&quot;]<br/>          }<br/>      ]<br/>  }<br/>  window.onload = function(){<br/>        var ctx = document.getElementById(&quot;canvas&quot;).getContext(&quot;2d&quot;);<br/>      window.myBar = new Chart(ctx).Bar(barChartData, {<br/>          responsive : true<br/>      });<br/>    }<br/>  &lt;/script&gt;<br/>    &lt;/body&gt;<br/>&lt;/html&gt;
+    </pre>
+                   </div>
+                </li>
+            </ul>
         
     <script src="http://extras.denverpost.com/foundation/js/vendor/jquery.js"></script>
     <script src="http://extras.denverpost.com/foundation/js/foundation.min.js"></script>
