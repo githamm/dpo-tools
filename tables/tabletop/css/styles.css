@@ -1,0 +1,23 @@
+body { padding-right: 0px; padding-left: 0px; }
+table { font-size: 12px; float: left; }
+.table th,
+.table td { text-align: left; font-family: verdana, sans-serif; font-size: 15px !important;}
+.table th { font-size: 14px }
+.table thead th { vertical-align: middle; cursor: pointer; }
+tr.odd {background-color: #e8e8e8;}
+tr.even {background-color: white;}
+tr.odd td.sorting_1 {background-color: #D3D6FF;}
+label, input, button, select, textarea { line-height: 30px }
+input, textarea, select, .uneditable-input { height: 25px; line-height: 25px; }
+select { width: 75px }
+.dataTables_length { padding-left: 10px }
+.dataTables_filter { padding-right: 10px }
+.table-striped tbody>tr:nth-child(odd)>th>td.sorting_1 { background-color: #D3D6FF }
+p { font-family: Verdana, sans-serif; font-size: 15px;}
+td { font-size: 15px !important; font-family: Verdana, sans-serif; }
+#gold { height: 25px; width: 100%; min-width: 65px; padding: 4.5px 0px 0px 0px; background: rgba(253,208,23,1.0); color: white; font-size: 15px; font-weight: bold; text-align: center; }
+#silver { height: 25px; width: 100%; min-width: 65px; padding: 4.5px 0px 0px 0px; background: rgba(192,192,192,1.0); color: white; font-size: 15px; font-weight: bold; text-align: center; }
+#bronze { height: 25px; width: 100%; min-width: 65px; padding: 4.5px 0px 0px 0px; background: rgba(205,127,50,1.0); color: white; font-size: 15px; font-weight: bold; text-align: center; }
+td.center { background-color: white !important; vertical-align: middle; }
+.container-fluid { padding-bottom: 20px; }
+label { font-family: verdana; }
