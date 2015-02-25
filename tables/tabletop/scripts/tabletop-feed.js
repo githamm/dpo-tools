@@ -4,7 +4,7 @@ var jqueryNoConflict = jQuery;
 jqueryNoConflict(document).ready(function(){
 
     // Key from Google sheet goes in line below
-    initializeTabletopObject('0Ank6vqQeY7CJdG1CYmJ6Z2RsRk5YWGtrMXBnRGhXa3c');
+    initializeTabletopObject('1TzJ-yaUa3-UgbV944xXD1g7RQTKMOuzSNlPSAXVM2qE');
 
 });
 

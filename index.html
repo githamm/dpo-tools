@@ -42,7 +42,10 @@
     <div class="row">
         <div class="medium-12 columns">
             <h2>Useful Things</h2>
-            <a href="http://www.computerhope.com/htmcolor.htm">HTML color codes and names</a>
+            <ul>
+                <li><a href="http://www.computerhope.com/htmcolor.htm">HTML color codes and names</a></li>
+                <li><a href="https://www.google.com/fonts/">Google fonts</a></li>
+            </ul>
         </div>
     </div>
 
@@ -77,17 +80,39 @@
     <div class="row">
         <div class="medium-12 columns">
             <h3>Tabletop to DataTables</h3>
-            <p><span style="font-weight: bold">Use </span>Somewhat responsive sortable table that updates dynamically from a public-facing Google sheet, based on <a href="https://github.com/jsoma/tabletop">Tabletop.js</a> and <a href="http://datatables.net/">DataTables</a>, a jQuery plugin / <a href="http://extras.denverpost.com/projects/2015/ski-worlds/mobile.html">Live example</a></p>
+            <p><span style="font-weight: bold">Use </span>A mostly responsive sortable table that updates dynamically from a public-facing Google sheet, based on <a href="https://github.com/jsoma/tabletop">Tabletop.js</a> and <a href="http://datatables.net/">DataTables</a>, a jQuery plugin / <a href="http://extras.denverpost.com/projects/2015/ski-worlds/mobile.html">Live example</a></p>
             <p><span style="font-weight: bold">GitHub </span><a href="#">Code for tables</a></p>
             <p><span style="font-weight: bold">Documentation </span><a href="https://github.com/chrislkeller/projects.chrislkeller.com/tree/master/demos/tabletop_to_datatables/">Tabletop to DataTables</a></p>
             <p style="font-weight: bold">Steps</p>
             <ol>
                 <li>Create new Google sheet in public-facing account</li>
-                <li>Share it with "Anyone on the Web"</li>
+                <li>Make it public: Share > Advanced > Change (from Private) > On - Public on the web > Save > Done</li>
                 <li>Publish it</li>
                 <li>Create new instances of "example.html" and "tabletop-feed.js"</li>
-                <li>Change ...
+                <li>Open "tabletop-feed.js" in a text editor and add the Google sheet's key to line 7:
+                    <p></p>
+                    <code>initializeTabletopObject('SPREADSHEETKEY');
+                    </code>
+                    <p></p>
+                </li>
+                <li>Starting on line 28, add in spreadsheet's column headers (mDataProp value)* and how you want them displayed on the page (sTitle value); add new lines as necessary to match spreadsheet columns (note comma after each line except the last):
+                    <p></p>
+                    <div class="panel">
+                        <pre>    var tableColumns =   [
+        {'mDataProp': 'athlete', 'sTitle': 'Athlete', 'sClass': 'center'},
+        {'mDataProp': 'country', 'sTitle': 'Country', 'sClass': 'center'},
+        {'mDataProp': 'event', 'sTitle': 'Event', 'sClass': 'center'},
+        {'mDataProp': 'medal', 'sTitle': 'Medal', 'sClass': 'center'}
+    ];                  </pre>
+                    </div>
+                <p>* Do not use spaces in this string. Ex:
+                    <code>{'mDataProp': 'skievent', 'sTitle': 'Ski Event', 'sClass': 'center'},</code>
+                </p>
+                </li>
+                <li>Upload "example.html" (rename this at will) and "tabletop-feed.js" to Extras server
             </ol>
+        </div>
+    </div>
 
     <script src="http://extras.denverpost.com/foundation/js/vendor/jquery.js"></script>
     <script src="http://extras.denverpost.com/foundation/js/foundation.min.js"></script>
