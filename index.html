@@ -44,16 +44,36 @@
     <div class="row">
         <div class="medium-12 columns">
             <h1>How to make some stuff</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a erat non metus pretium tincidunt in nec magna. Duis id neque orci. 0a facilisi. Curabitur sagittis sapien vitae tortor vulputate facilisis. Mauris vel erat sed turpis iaculis mattis. Quisque pharetra elit sit amet purus finibus laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae venenatis tortor, eu vestibulum leo.</p>
+            <p>This page will continue to get updated with new tools.</p>
         </div>
     </div>
     <div class="row">
         <div class="medium-12 columns">
             <h2 class="section-header">Charts</h2>            
             <h3>Custom Google charts</h3>
-            <p><span style="font-weight: bold">Use </span>Quick chart to embed in NGPS freeform</p>
-            <p><span style="font-weight: bold">Documentation </span>
-            <p><span style="font-weight: bold">OTHERS </span><a href="http://quartz.github.io/Chartbuilder/">Quartz ChartBuilder</a>, <a href="https://infogr.am/">infogr.am</a></p>
+            <p><span style="font-weight: bold">USE </span>Quick, interactive chart to embed in NGPS freeform</p>
+            <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/google">Code for line, bar, column and pie charts on GitHub</a></p>
+            <p><span style="font-weight: bold">DOCUMENTATION </span><a href="https://developers.google.com/chart/">Google charts</a></p>
+            <p><span style="font-weight: bold">STEPS</span></p>
+            <ol>
+                <li>Copy chart code from GitHub and create new file with it</li>
+                <li>Replace label and data variables</li>
+                <p></p>
+                <p>Line chart example:</p>
+                <p></p>
+                <div class="panel">
+                    <pre>data.addColumn('string', 'County');
+        data.addColumn('number', 'Wells');
+        data.addRows([
+          ['Weld', 500],
+          ['Larimer', 400],
+          ['Yuma', 300],
+          ['Washington', 200],
+          ['Archuleta', 100]
+        ]);</pre>
+                </div>
+            <p><span style="font-weight: bold">EMBED </span>To embed a Google chart in a freeform, copy all the code, delete these tags: <code>&lt;html&gt; &lt;head&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt;</code> and paste remaining code into the freeform</p>
+            <p><span style="font-weight: bold">OTHERS </span><a href="http://quartz.github.io/Chartbuilder/">Quartz ChartBuilder</a>, <a href="https://infogr.am/">infogr.am</a> (<a href="http://www.denverpost.com/data/ci_27306193/chart-brief-history-denver-broncos-coaches">live example</a>)</p>
         </div>
     </div>
     <div class="row">
