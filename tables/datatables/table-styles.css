@@ -1,0 +1,18 @@
+h1.logo {
+	font-family: Georgia, serif;
+	font-size: 26px !important;
+}
+
+/* Uncomment this to hide row with pagination length choice and search box */
+/* label {
+	display: none;
+} */
+
+/* Next two hides pagination length choice dropdown */
+.dataTables_length select {
+	display: none;
+}
+
+div.dataTables_length label {
+	display: none;
+}

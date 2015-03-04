@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sortable table example</title>
+    <!-- Base styles -->
+    <link rel="stylesheet" href="http://extras.denverpost.com/frameworks/tables/css/base.css" />
+    <link rel="stylesheet" href="http://extras.denverpost.com/frameworks/tables/css/base-datatable.css" />
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/foundation/5.5.1/css/foundation.min.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/f2c75b7247b/integration/foundation/dataTables.foundation.css">
+    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css">
+    <link rel="stylesheet" href="table-styles.css">
+
+    <!-- JS: Libraries -->
+    <script src="http://extras.denverpost.com/frameworks/tables/js/lib/jquery-1.11.1.js"></script>
+    <script src="http://extras.denverpost.com/frameworks/tables/js/lib/jquery.dataTables.min.js"></script>
+    <script src="http://extras.denverpost.com/frameworks/tables/js/lib/tabletop.js"></script>
+    <script src="http://extras.denverpost.com/frameworks/tables/js/lib/underscore.js"></script>
+    <script src="http://extras.denverpost.com/frameworks/tables/js/lib/handlebars-v1.3.0.js"></script>
+    <script src="http://cdn.datatables.net/plug-ins/f2c75b7247b/integration/foundation/dataTables.foundation.js"></script>
+    <script src="http://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js"></script>
+</head>
+<body>
+
+    <!-- Content-->
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <h1 class="logo"><a href="http://www.denverpost.com/" target="_top">The Denver Post</a></h1>
+            </li>
+        </ul>
+    </nav>
+   <div class="row">
+        <div class="small-12 columns">
+            <h1>DataTables template</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis magna pulvinar odio iaculis ullamcorper porta eu magna. Mauris sagittis porta nibh, cursus luctus neque tempus ut. Aenean venenatis suscipit odio, ac elementum magna lobortis in.</p>
+        </div>
+    </div>
+    
+    <!-- Table headers - how you want them to look on page -->
+    <div class="row">
+        <div class="small-12 columns">
+            <table id="searchable-table" class="display responsive no-wrap" width="100%">
+                <thead>
+                    <tr>
+                        <th>Team</th>
+                        <th>Carryover</th>
+                        <th>Adjustments</th>
+                        <th>Salary Cap</th>
+                        <th>Adjusted Cap</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Templates -->
+    <script id="datatable-template" type="text/x-handlebars-template">
+        {{#each elements}}
+        // The following correspond to spreadsheet headers
+            <tr>
+                <td data-title="Team:">{{ team }}</td>
+                <td data-title="Carryover:">{{ carryover }}</td>
+                <td data-title="Adjustments:">{{ adjustments }}</td>
+                <td data-title="Salary Cap:">{{ salarycap }}</td>
+                <td data-title="Adjusted Cap:">{{ adjustedteamcap }}</td>
+            </tr>
+        {{/each}}
+    </script>
+    <!-- Custom JS -->
+    <script src="http://extras.denverpost.com/frameworks/tables/js/base.js"></script>
+    <script src="http://extras.denverpost.com/frameworks/tables/js/datatable-tabletop-load-broncos.js"></script>
+</body>
+</html>
