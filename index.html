@@ -9,6 +9,13 @@
         <link rel="stylesheet" type="text/css" href="http://extras.denverpost.com/weather-closures/weather-closures-styles.css" />
         <script src="http://extras.denverpost.com/foundation/js/vendor/modernizr.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+        <style type="text/css">
+        h2.section-header {
+            background-color: #eeeeee;
+            text-align: center;
+        }
+        </style>
     </head>
 <body>
      <nav class="top-bar" data-topbar role="navigation" style="margin-bottom:1rem">
@@ -36,55 +43,83 @@
 
     <div class="row">
         <div class="medium-12 columns">
+            <h1>How to make some stuff</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a erat non metus pretium tincidunt in nec magna. Duis id neque orci. 0a facilisi. Curabitur sagittis sapien vitae tortor vulputate facilisis. Mauris vel erat sed turpis iaculis mattis. Quisque pharetra elit sit amet purus finibus laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae venenatis tortor, eu vestibulum leo.</p>
         </div>
     </div>
     <div class="row">
         <div class="medium-12 columns">
-            <h2>Useful Things</h2>
-            <ul>
-                <li><a href="http://www.computerhope.com/htmcolor.htm">HTML color codes and names</a></li>
-                <li><a href="https://color.adobe.com/create/color-wheel/">Adobe Color CC</a></li>
-                <li><a href="https://www.google.com/fonts/">Google fonts</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="medium-12 columns">
-            <h2>Charts</h2>
+            <h2 class="section-header">Charts</h2>            
             <h3>Custom Google charts</h3>
             <p><span style="font-weight: bold">Use </span>Quick chart to embed in NGPS freeform</p>
             <p><span style="font-weight: bold">Documentation </span>
+            <p><span style="font-weight: bold">OTHERS </span><a href="http://quartz.github.io/Chartbuilder/">Quartz ChartBuilder</a>, <a href="https://infogr.am/">infogr.am</a></p>
         </div>
     </div>
     <div class="row">
         <div class="medium-12 columns">
             <h3>Chart.js</h3>
-            <p><span style="font-weight: bold">Use </span>Responsive charts to add to non-NGPS web page (but can be added to NGPS via iframe &mdash; code below) / <a href="http://www.thecannabist.co/2015/02/12/colorado-marijuana-sales-2014-700-million/27565/">Live example</a></p>
-            <p><span style="font-weight: bold">Types </span><a href="http://extras.denverpost.com/frameworks/charts/samples/bar.html">Bar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/line.html">Line</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/doughnut.html">Doughnut</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/pie.html">Pie</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/polar-area.html">Polar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/radar.html">Radar</a></p>
-            <p><span style="font-weight: bold">GitHub </span><a href="https://github.com/githamm/dpo-tools/tree/master/chart-js">Code for all charts</a></p>
-            <p><span style="font-weight: bold">Documentation </span><a href="http://www.chartjs.org/">chartjs.org</a></p>
-            <p><span style="font-weight: bold">Iframe code example</span></p>
+            <p><span style="font-weight: bold">USE </span>Interactive, responsive charts that can be added to NGPS via iframe &mdash; code below / <a href="http://www.thecannabist.co/2015/02/12/colorado-marijuana-sales-2014-700-million/27565/">Live example</a></p>
+            <p><span style="font-weight: bold">TYPES </span><a href="http://extras.denverpost.com/frameworks/charts/samples/bar.html">Bar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/line.html">Line</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/doughnut.html">Doughnut</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/pie.html">Pie</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/polar-area.html">Polar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/radar.html">Radar</a></p>
+            <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/chart-js">Code for all charts on GitHub</a></p>
+            <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://www.chartjs.org/">chartjs.org</a></p>
+            <p><span style="font-weight: bold">IFRAME CODE EXAMPLE</span></p>
             <p>
                 <code>
                 &lt;iframe height=&quot;400&quot; width=&quot;654&quot; frameBorder=&quot;0&quot; src=&quot;http://URLTOCHART&quot;&gt;&lt;/iframe&gt;
                 </code>
             </p>
+            <p><span style="font-weight: bold">STEPS</span></p>
+            <ol>
+                <li>Copy chart code from GitHub and create new file with it</li>
+                <li>Replace label and data variables</li>
+                <p></p>
+                <p>Line chart example:</p>
+                <p></p>
+                <div class="panel">
+                    <pre>// Enter labels for horizontal axis
+        labels : ["January","February","March","April","May","June","July"],
+        datasets : [
+            {
+                fillColor : "rgba(72,99,160,0.5)", /* bar color */
+                strokeColor : "rgba(72,99,160,0.8)", /* bar border color */
+                highlightFill: "rgba(72,99,160,0.75)", /* bar color on hover/click */
+                highlightStroke: "rgba(72,99,160,1)", /* bar border color on hover/click */
+                data : ["1","3","5","7","9","11","13"] /* data */
+            },
+            // copy and paste above code for more bars; last set has no comma
+            {
+                fillColor : "rgba(161,72,99,0.5)",
+                strokeColor : "rgba(161,72,99,0.8)",
+                highlightFill : "rgba(161,72,99,0.75)",
+                highlightStroke : "rgba(161,72,99,1)",
+                data : ["2","4","6","8","10","12","14"]
+            },
+            {
+                fillColor : "rgba(99,161,72,0.5)",
+                strokeColor : "rgba(99,161,72,0.8)",
+                highlightFill : "rgba(99,161,72,0.75)",
+                highlightStroke : "rgba(99,161,72,1)",
+                data : ["3","5","7","9","11","13","15"]
+            }
+        ]</pre>
+                </div>
+                </li>
+                <li>Upload file to Extras server and add chart via iframe or add code to web page (can't add code to article or freeform in NGPS because chart uses <code>&lt;canvas&gt;</code> tag)</li>
+            </ul>
         </div>
     </div>
     <div class="row">
         <div classs="medium-12 columns">
-            <h2>Tables</h2>
+            <h2 class="section-header">Tables</h2>
         </div>
     </div>
     <div class="row">
         <div class="medium-12 columns">
             <h3>DataTables</h3>
-            <p><span style="font-weight: bold">Use </span>A responsive, sortable, searchable table that updates dynamically from a public-facing Google sheet, based on <a href="http://datatables.net/">DataTables</a> / <a href="http://extras.denverpost.com/frameworks/tables/datatables/example.html">Live example</a></p>
-            <p><span style="font-weight: bold">GitHub </span><a href="#">Code for tables</a></p>
-            <p><span style="font-weight: bold">Documentation </span><a href="https://github.com/GazetteKCRGdata/datatable-template">DataTables Template</a></p>
-            <p style="font-weight: bold">Steps</p>
+            <p><span style="font-weight: bold">USE </span>A responsive, sortable, searchable table that updates dynamically from a public-facing Google sheet, based on <a href="http://datatables.net/">DataTables</a> / <a href="http://extras.denverpost.com/frameworks/tables/datatables/example.html">Live example</a></p>
+            <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/tables/datatables">GitHub</a></p>
+            <p style="font-weight: bold">STEPS</p>
             <ol>
                 <li>Create new Google sheet in public-facing account</li>
                     <ul>
@@ -92,8 +127,8 @@
                     </ul>
                 <li>Make it public: Share > Advanced > Change (from Private) > On - Public on the web > Save > Done</li>
                 <li>Publish it</li>
-                <li>Create new instances of "example.html" and "example.js" (from "js" folder) and name them something relevant to your project</li>
-                <li>Open "example.html" in a text editor and change the table headers (starting on line 45) to how you want them to display on the page:
+                <li>Create new instances of <span style="font-weight: bold">example.html</span> (<a href="https://github.com/githamm/dpo-tools/blob/master/tables/datatables/example.html">GitHub code</a>) and <span style="font-weight: bold">example.js</span> (from "js" folder - <a href="https://github.com/githamm/dpo-tools/blob/master/tables/datatables/js/example.js">GitHub code</a>) and name them something relevant to your project</li>
+                <li>Open the renamed <span style="font-weight: bold">example.html</span> in a text editor and change the table headers (starting on line 45) to how you want them to display on the page:
                     <p></p>
                     <div class="panel">
                         <pre>&lt;th&gt;Header 1&lt;/th&gt;<br/>&lt;th&gt;Header 2&lt;/th&gt;<br/>&lt;th&gt;Header 3&lt;/th&gt;<br/>&lt;th&gt;Header 4&lt;/th&gt;<br/>&lt;th&gt;Header 5&lt;/th&gt;</pre>
@@ -107,10 +142,10 @@
                     </div>
                 <li>On line 72, change the file name to match the .js file name from step 4<br>
                     <p></p>
-                    <p><code>&lt;script src=&quot;http://extras.denverpost.com/frameworks/tables/js/example.js&quot;&gt;&lt;/script&gt;</code></p>
+                    <p><code>&lt;script src=&quot;http://extras.denverpost.com/frameworks/tables/datatables/js/example.js&quot;&gt;&lt;/script&gt;</code></p>
                 </li>
                 <p></p>
-                <li>Open renamed datatable-tabletop-load-example.js in a text editor and add your Google sheet's key* between the single quote marks:<br>
+                <li>Open renamed <span style="font-weight: bold">example.js</span> in a text editor and add your Google sheet's key* between the single quote marks on line 7:<br>
                 <p></p>
                 <code>var spreadsheet_key = '1T0n6-bVZo2lpvL95HejOX9eKwCyH5g6Hc3XX41Yk4Yo';</code><br>
                 <p></p>
@@ -128,6 +163,21 @@
                 <li>Upload both files to the Extras server: <span style="font-weight: bold">frameworks > tables > datatables</span> (.html file) and <span style="font-weight: bold">frameworks > tables > datatables > js</span> (.js file)</li>
                 <li>Table should be at <span style="font-weight: bold">http://extras.denverpost.com/frameworks/tables/datatables/YOURFILENAME.html</span></li>
             </ol>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <h2 class="section-header">Maps</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="medium-12 columns">
+            <h2 class="section-header">Useful Things</h2>
+            <ul>
+                <li><a href="http://www.computerhope.com/htmcolor.htm">HTML color codes and names</a></li>
+                <li><a href="https://color.adobe.com/create/color-wheel/">Adobe Color CC</a></li>
+                <li><a href="https://www.google.com/fonts/">Google fonts</a></li>
+            </ul>
         </div>
     </div>
 
