@@ -123,7 +123,7 @@ function initializeTabletopObject(){
     	key: google_docs_one + spreadsheet_key + google_docs_two,
     	callback: loadToDOM,
     	simpleSheet: false,
-    	debug: false
+    	debug: false,
     });
 }
 
