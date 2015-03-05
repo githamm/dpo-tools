@@ -52,7 +52,12 @@
             <h2 class="section-header">Charts</h2>            
             <h3>Custom Google charts</h3>
             <p><span style="font-weight: bold">USE </span>Quick, interactive chart to embed in NGPS freeform</p>
+             <p><span style="font-weight: bold">TYPES </span><a href="https://developers.google.com/chart/interactive/docs/gallery">Variety</a></p>
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/google">Code for line, bar, column and pie charts on GitHub</a></p>
+            <p><span style="font-weight: bold">NOTE </span>To change easily between pie, bar and column charts, change the chart type in line 36 (<span style="color:red">PieChart</span>, <span style="color:red">BarChart</span> or <span style="color:red">ColumnChart</span>):</p>
+            <p></p>
+            <code> var chart = new google.visualization.<span style="color:red">PieChart</span>(document.getElementById('chart_div'))</code>
+            <p></p>
             <p><span style="font-weight: bold">DOCUMENTATION </span><a href="https://developers.google.com/chart/">Google charts</a></p>
             <p><span style="font-weight: bold">STEPS</span></p>
             <ol>
@@ -72,6 +77,7 @@
           ['Archuleta', 100]
         ]);</pre>
                 </div>
+            </ol>
             <p><span style="font-weight: bold">EMBED </span>To embed a Google chart in a freeform, copy all the code, delete these tags: <code>&lt;html&gt; &lt;head&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt;</code> and paste remaining code into the freeform</p>
             <p><span style="font-weight: bold">OTHERS </span><a href="http://quartz.github.io/Chartbuilder/">Quartz ChartBuilder</a>, <a href="https://infogr.am/">infogr.am</a> (<a href="http://www.denverpost.com/data/ci_27306193/chart-brief-history-denver-broncos-coaches">live example</a>)</p>
         </div>
@@ -81,7 +87,7 @@
             <h3>Chart.js</h3>
             <p><span style="font-weight: bold">USE </span>Interactive, responsive charts that can be added to NGPS via iframe &mdash; code below / <a href="http://www.thecannabist.co/2015/02/12/colorado-marijuana-sales-2014-700-million/27565/">Live example</a></p>
             <p><span style="font-weight: bold">TYPES </span><a href="http://extras.denverpost.com/frameworks/charts/samples/bar.html">Bar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/line.html">Line</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/doughnut.html">Doughnut</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/pie.html">Pie</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/polar-area.html">Polar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/radar.html">Radar</a></p>
-            <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/chart-js">Code for all charts on GitHub</a></p>
+            <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/chart-js">Code for all charts on GitHub</a></p>
             <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://www.chartjs.org/">chartjs.org</a></p>
             <p><span style="font-weight: bold">IFRAME CODE EXAMPLE</span></p>
             <p>
@@ -146,7 +152,7 @@
                         <li>Google account: denverpostdata (password in Passpack)</li>
                     </ul>
                 <li>Make it public: Share > Advanced > Change (from Private) > On - Public on the web > Save > Done</li>
-                <li>Publish it</li>
+                <li>Publish it: File > Publish to the web > Publish</li>
                 <li>Create new instances of <span style="font-weight: bold">example.html</span> (<a href="https://github.com/githamm/dpo-tools/blob/master/tables/datatables/example.html">GitHub code</a>) and <span style="font-weight: bold">example.js</span> (from "js" folder - <a href="https://github.com/githamm/dpo-tools/blob/master/tables/datatables/js/example.js">GitHub code</a>) and name them something relevant to your project</li>
                 <li>Open the renamed <span style="font-weight: bold">example.html</span> in a text editor and change the table headers (starting on line 45) to how you want them to display on the page:
                     <p></p>
@@ -188,6 +194,10 @@
     <div class="row">
         <div class="medium-12 columns">
             <h2 class="section-header">Maps</h2>
+            <h3>CartoDB</h3>
+              <p><span style="font-weight: bold">USE </span>Super flexible, responsive, maps. You can drop .csv files of data points or shapefiles right into interface for easy mapping. Features the ability to combine tables (say, a shapefile of Colorado counties with Census income data) and do SQL-type filtering. / <a href="http://www.denverpost.com/environment/ci_27618385/colorado-land-impact-oil-and-gas-boom-scars">Live example</a></p>
+                <p><span style="font-weight: bold">TYPES </span>Simple, cluster, choropleth, category, bubble, torque, torque heat, torque category, intensity, density</p>
+                 <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://cartodb.com/">CartoDB</a></p>
         </div>
     </div>
     <div class="row">
