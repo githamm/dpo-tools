@@ -45,6 +45,8 @@
 			responsive : true
 		});
 	}
-	</script>	
+	// Tweak tooltip: Add words, symbols outside of <> tags
+	Chart.defaults.global.multiTooltipTemplate = " $<%= value %> million";
+	</script>
 	</body>
 </html>

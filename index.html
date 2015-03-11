@@ -50,7 +50,7 @@
     <div class="row">
         <div class="medium-12 columns">
             <h2 class="section-header">Charts</h2>            
-            <h3>Custom Google charts</h3>
+            <h3 class="section-label">Custom Google chart</h3>
             <p><span style="font-weight: bold">USE </span>Quick, interactive chart to embed in NGPS freeform</p>
              <p><span style="font-weight: bold">TYPES </span><a href="https://developers.google.com/chart/interactive/docs/gallery">Variety</a></p>
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/google">Code for line, bar, column and pie charts on GitHub</a></p>
@@ -84,11 +84,18 @@
     </div>
     <div class="row">
         <div class="medium-12 columns">
+            <hr>
             <h3>Chart.js</h3>
             <p><span style="font-weight: bold">USE </span>Interactive, responsive charts that can be added to NGPS via iframe &mdash; code below / <a href="http://www.thecannabist.co/2015/02/12/colorado-marijuana-sales-2014-700-million/27565/">Live example</a></p>
             <p><span style="font-weight: bold">TYPES </span><a href="http://extras.denverpost.com/frameworks/charts/samples/bar.html">Bar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/line.html">Line</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/doughnut.html">Doughnut</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/pie.html">Pie</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/polar-area.html">Polar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/radar.html">Radar</a></p>
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/chart-js">Code for all charts on GitHub</a></p>
             <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://www.chartjs.org/">chartjs.org</a></p>
+            <p><span style="font-weight: bold">TOOLTIPS </span>The following lines of code affect the chart tooltips and how the labels and data are displayed. In the code examples on GitHub, you'll find these lines at the bottom of the files just above the closing <code>&lt;/script&gt;</code> tag.</p>
+            <p style="font-weight: bold">For charts where tooltips have only one label and one data value (such as pie charts):<br>
+            <p><code>Chart.defaults.global.tooltipTemplate = " <%= label %><span style="color: red">: $</span><%= value %> <span style="color: red">million</span>";</code></p>
+            <p><span style="font-style: italic">Anything can be added outside of the <> tags &mdash; don't change anything in those. Ex: If label is "Peyton Manning" and value is "15", then tooltip would look like: Peyton Manning: $15 million</span></p>
+             <p style="font-weight: bold">For charts where tooltips have one array label but multiple data values (such as line or bar charts):<br>
+            <p><code>Chart.defaults.global.multiTooltipTemplate = " <span style="color: red">$</span><%= value %> <span style="color: red">million</span>";</code></p>
             <p><span style="font-weight: bold">IFRAME CODE EXAMPLE</span></p>
             <p>
                 <code>
