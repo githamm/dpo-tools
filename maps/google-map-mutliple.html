@@ -1,0 +1,58 @@
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<!-- Change map size on next line -->
+<div id="map" style="width: 500px; height: 400px;"></div>
+
+<script type="text/javascript">
+    // Next line for tooltip/popup window goes between '', followed by marker latitude, longitude and unique ID
+    var locations = [
+        ['200 block of South Monaco Parkway (2 dead)', 39.713436,-104.912703, 1],
+        ['3200 block of Pontiac Street (1 dead)', 39.761985,-104.905766, 2],
+        ['3400 block of Race Street (1 dead)', 39.764763,-104.963207, 3],
+        ['1900 block of South Depew Street (1 wounded)', 39.682214,-105.057247, 4]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+        // Don't need following two lines because map automatically centers based on AutoCenter function at bottom
+        // zoom: 10,
+        // center: new google.maps.LatLng(39.739236,-104.990251),
+
+        // Choose your map type: ROADMAP, SATELLITE, HYBRID, TERRAIN
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+    var markers = new Array();
+
+    for (i = 0; i < locations.length; i++) {  
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map
+        });
+
+        markers.push(marker);
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infowindow.setContent(locations[i][0]);
+                infowindow.open(map, marker);
+            }
+        })(marker, i));
+    }
+
+    function AutoCenter() {
+        //  Create a new viewpoint bound
+        var bounds = new google.maps.LatLngBounds();
+        //  Go through each...
+        $.each(markers, function (index, marker) {
+            bounds.extend(marker.position);
+        });
+        //  Fit these bounds to the map
+        map.fitBounds(bounds);
+    }
+    AutoCenter();
+</script>
