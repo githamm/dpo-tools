@@ -13,7 +13,14 @@
         <style type="text/css">
         h2.section-header {
             background-color: #eeeeee;
+            font-size: 45px;
             text-align: center;
+            padding-top: 25px; padding-bottom: 25px;
+        }
+        h3.section-label {
+            background-color: rgba(70,130,180,.5);
+            text-align: center;
+            font-size: 24px;
         }
         </style>
     </head>
@@ -21,35 +28,28 @@
      <nav class="top-bar" data-topbar role="navigation" style="margin-bottom:1rem">
         <ul class="title-area">
             <li class="name">
-            <h1 id="logo"><a href="http://www.denverpost.com/" target="_top">The Denver Post</a></h1>            
+            <h1 id="logo"><a href="#">The Denver Post: How to Make Some Stuff</a></h1>      
             </li>
-            <!-- <li class="toggle-topbar menu-icon"><a href="#"><span>Team</span></a></li> -->
         </ul>
-        <!-- <section class="top-bar-section">
+
+        <section class="top-bar-section">
             <ul class="left">
                 <li class="has-dropdown">
-                    <a href="#">Team</a>
+                    <a href="#">I want to make a...</a>
                     <ul class="dropdown">
-                        <li><a href="#">Broncos</a></li>
-                        <li><a href="#">Rockies</a></li>
-                        <li><a href="#">Nuggets</a></li>
-                        <li><a href="#">Avalanche</a></li>
-                        <li><a href="#">Rapids</a></li>
+                        <li><a href="#chart">Chart</a></li>
+                        <li><a href="#table">Table</a></li>
+                        <li><a href="#map">Map</a></li>
+                        <li><a href="#links">Links to resources</a></li>
                     </ul>
                 </li>
             </ul>
-        </section> -->
+        </section>
     </nav>
 
     <div class="row">
         <div class="medium-12 columns">
-            <h1>How to make some stuff</h1>
-            <p>This page will continue to get updated with new tools.</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="medium-12 columns">
-            <h2 class="section-header">Charts</h2>            
+            <h2 class="section-header" id="chart">CHARTS</h2>            
             <h3 class="section-label">Custom Google chart</h3>
             <p><span style="font-weight: bold">USE </span>Quick, interactive chart to embed in NGPS freeform</p>
              <p><span style="font-weight: bold">TYPES </span><a href="https://developers.google.com/chart/interactive/docs/gallery">Variety</a></p>
@@ -68,24 +68,24 @@
                 <p></p>
                 <div class="panel">
                     <pre>data.addColumn('string', 'County');
-        data.addColumn('number', 'Wells');
-        data.addRows([
-          ['Weld', 500],
-          ['Larimer', 400],
-          ['Yuma', 300],
-          ['Washington', 200],
-          ['Archuleta', 100]
-        ]);</pre>
+    data.addColumn('number', 'Wells');
+    data.addRows([
+      ['Weld', 500],
+      ['Larimer', 400],
+      ['Yuma', 300],
+      ['Washington', 200],
+      ['Archuleta', 100]
+    ]);</pre>
                 </div>
             </ol>
             <p><span style="font-weight: bold">EMBED </span>To embed a Google chart in a freeform, copy all the code, delete these tags: <code>&lt;html&gt; &lt;head&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt;</code> and paste remaining code into the freeform</p>
             <p><span style="font-weight: bold">OTHERS </span><a href="http://quartz.github.io/Chartbuilder/">Quartz ChartBuilder</a>, <a href="https://infogr.am/">infogr.am</a> (<a href="http://www.denverpost.com/data/ci_27306193/chart-brief-history-denver-broncos-coaches">live example</a>)</p>
         </div>
     </div>
+
     <div class="row">
-        <div class="medium-12 columns">
-            <hr>
-            <h3>Chart.js</h3>
+        <div class="medium-12 columns">           
+            <h3 class="section-label">Chart.js</h3>
             <p><span style="font-weight: bold">USE </span>Interactive, responsive charts that can be added to NGPS via iframe &mdash; code below / <a href="http://www.thecannabist.co/2015/02/12/colorado-marijuana-sales-2014-700-million/27565/">Live example</a></p>
             <p><span style="font-weight: bold">TYPES </span><a href="http://extras.denverpost.com/frameworks/charts/samples/bar.html">Bar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/line.html">Line</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/doughnut.html">Doughnut</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/pie.html">Pie</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/polar-area.html">Polar</a> / <a href="http://extras.denverpost.com/frameworks/charts/samples/radar.html">Radar</a></p>
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/chart-js">Code for all charts on GitHub</a></p>
@@ -144,12 +144,12 @@
     </div>
     <div class="row">
         <div classs="medium-12 columns">
-            <h2 class="section-header">Tables</h2>
+            <h2 class="section-header" id="table">TABLES</h2>
         </div>
     </div>
     <div class="row">
         <div class="medium-12 columns">
-            <h3>DataTables</h3>
+            <h3 class="section-label">DataTables</h3>
             <p><span style="font-weight: bold">USE </span>A responsive, sortable, searchable table that updates dynamically from a public-facing Google sheet, based on <a href="http://datatables.net/">DataTables</a> / <a href="http://extras.denverpost.com/frameworks/tables/datatables/example.html">Live example</a></p>
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/tables/datatables">GitHub</a></p>
             <p style="font-weight: bold">STEPS</p>
@@ -200,16 +200,35 @@
     </div>
     <div class="row">
         <div class="medium-12 columns">
-            <h2 class="section-header">Maps</h2>
-            <h3>CartoDB</h3>
-              <p><span style="font-weight: bold">USE </span>Super flexible, responsive, maps. You can drop .csv files of data points or shapefiles right into interface for easy mapping. Features the ability to combine tables (say, a shapefile of Colorado counties with Census income data) and do SQL-type filtering. / <a href="http://www.denverpost.com/environment/ci_27618385/colorado-land-impact-oil-and-gas-boom-scars">Live example</a></p>
+            <h2 class="section-header" id="map">MAPS</h2>
+            <h3 class="section-label">Google Maps</h3>
+                <p><span style="font-weight: bold">USE </span>Custom Google map with multiple markers and tooltips that can be used in an NGPS freeform or article / <a href="http://www.denverpost.com/news/ci_27727767/denver-police-make-arrest-non-fatal-weekend-shooting?source=pkg">Live example</a></p>
+                <p><span style="font-weight: bold">TYPES </span>Multiple markers with road, satellite, hybrid or terrain backgrounds</p>
+                <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/blob/master/maps/google-map-mutliple.html">GitHub</a></p>
+                <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example">Stack Overflow</a></p>
+                <p><span style="font-weight: bold">STEPS </span></p>
+                <ol>
+                    <li>The only thing you really need to change is the array that contains the tooltip text and latitude and longitude points:</p>
+                    <div class="panel">
+                        <pre>var locations = [
+    ['200 block of South Monaco Parkway (2 dead)', 39.713436,-104.912703],
+    ['3200 block of Pontiac Street (1 dead)', 39.761985,-104.905766],
+    ['3400 block of Race Street (1 dead)', 39.764763,-104.963207],
+    ['1900 block of South Depew Street (1 wounded)', 39.682214,-105.057247]
+];</pre></li>                
+                <p style="font-style: italic">Anything in between ' ' is the text that will appear in the tooltip/popup window when a map marker is clicked; latitude and longitude points for each map marker. Here's a good site for finding lat/long from an address: <a href="http://www.latlong.net/convert-address-to-lat-long.html">latlong.net/convert-address-to-lat-long.html</a></p>
+                    <li>Copy and paste all code into a freeform or article page</li>
+                </ol>
+
+                <h3 class="section-label">CartoDB</h3>
+                <p><span style="font-weight: bold">USE </span>Super flexible, responsive, maps that can be embedded into NGPS. You can drop .csv files of data points or shapefiles right into interface for easy mapping. Features the ability to combine tables (say, a shapefile of Colorado counties with Census income data) and do SQL-type filtering. / <a href="http://www.denverpost.com/environment/ci_27618385/colorado-land-impact-oil-and-gas-boom-scars">Live example</a></p>
                 <p><span style="font-weight: bold">TYPES </span>Simple, cluster, choropleth, category, bubble, torque, torque heat, torque category, intensity, density</p>
-                 <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://cartodb.com/">CartoDB</a></p>
+                <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://cartodb.com/">CartoDB</a></p>
         </div>
     </div>
     <div class="row">
         <div class="medium-12 columns">
-            <h2 class="section-header">Useful Things</h2>
+            <h2 class="section-header" id="links">USEFUL STUFF</h2>
             <ul>
                 <li><a href="http://www.computerhope.com/htmcolor.htm">HTML color codes and names</a></li>
                 <li><a href="https://color.adobe.com/create/color-wheel/">Adobe Color CC</a></li>
