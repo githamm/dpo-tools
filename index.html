@@ -30,10 +30,11 @@
             <li class="name">
             <h1 id="logo"><a href="#">The Denver Post: How to Make Some Stuff</a></h1>      
             </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
         </ul>
 
         <section class="top-bar-section">
-            <ul class="left">
+            <ul class="right">
                 <li class="has-dropdown">
                     <a href="#">I want to make a...</a>
                     <ul class="dropdown">
@@ -56,7 +57,7 @@
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/charts/google">Code for line, bar, column and pie charts on GitHub</a></p>
             <p><span style="font-weight: bold">NOTE </span>To change easily between pie, bar and column charts, change the chart type in line 36 (<span style="color:red">PieChart</span>, <span style="color:red">BarChart</span> or <span style="color:red">ColumnChart</span>):</p>
             <p></p>
-            <code> var chart = new google.visualization.<span style="color:red">PieChart</span>(document.getElementById('chart_div'))</code>
+            <div class="panel"><pre> var chart = new google.visualization.<span style="color:red">PieChart</span>(document.getElementById('chart_div'))</pre></div>
             <p></p>
             <p><span style="font-weight: bold">DOCUMENTATION </span><a href="https://developers.google.com/chart/">Google charts</a></p>
             <p><span style="font-weight: bold">STEPS</span></p>
@@ -70,15 +71,15 @@
                     <pre>data.addColumn('string', 'County');
     data.addColumn('number', 'Wells');
     data.addRows([
-      ['Weld', 500],
-      ['Larimer', 400],
-      ['Yuma', 300],
-      ['Washington', 200],
-      ['Archuleta', 100]
+        ['Weld', 500],
+        ['Larimer', 400],
+        ['Yuma', 300],
+        ['Washington', 200],
+        ['Archuleta', 100]
     ]);</pre>
                 </div>
             </ol>
-            <p><span style="font-weight: bold">EMBED </span>To embed a Google chart in a freeform, copy all the code, delete these tags: <code>&lt;html&gt; &lt;head&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt;</code> and paste remaining code into the freeform</p>
+            <p><span style="font-weight: bold">EMBED </span>To embed a Google chart in a freeform, copy all the code, delete these tags: <div class="panel"><pre>&lt;html&gt; &lt;head&gt; &lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;/html&gt;</div> and paste remaining code into the freeform</p>
             <p><span style="font-weight: bold">OTHERS </span><a href="http://quartz.github.io/Chartbuilder/">Quartz ChartBuilder</a>, <a href="https://infogr.am/">infogr.am</a> (<a href="http://www.denverpost.com/data/ci_27306193/chart-brief-history-denver-broncos-coaches">live example</a>)</p>
         </div>
     </div>
@@ -92,15 +93,13 @@
             <p><span style="font-weight: bold">DOCUMENTATION </span><a href="http://www.chartjs.org/">chartjs.org</a></p>
             <p><span style="font-weight: bold">TOOLTIPS </span>The following lines of code affect the chart tooltips and how the labels and data are displayed. In the code examples on GitHub, you'll find these lines at the bottom of the files just above the closing <code>&lt;/script&gt;</code> tag.</p>
             <p style="font-weight: bold">For charts where tooltips have only one label and one data value (such as pie charts):<br>
-            <p><code>Chart.defaults.global.tooltipTemplate = " <%= label %><span style="color: red">: $</span><%= value %> <span style="color: red">million</span>";</code></p>
+            <p><div class="panel"><pre>Chart.defaults.global.tooltipTemplate = " <%= label %><span style="color: red">: $</span><%= value %> <span style="color: red">million</span>";</div></p>
             <p><span style="font-style: italic">Anything can be added outside of the <> tags &mdash; don't change anything in those. Ex: If label is "Peyton Manning" and value is "15", then tooltip would look like: Peyton Manning: $15 million</span></p>
              <p style="font-weight: bold">For charts where tooltips have one array label but multiple data values (such as line or bar charts):<br>
-            <p><code>Chart.defaults.global.multiTooltipTemplate = " <span style="color: red">$</span><%= value %> <span style="color: red">million</span>";</code></p>
+            <p><div class="panel"><pre>Chart.defaults.global.multiTooltipTemplate = " <span style="color: red">$</span><%= value %> <span style="color: red">million</span>";</div></p>
             <p><span style="font-weight: bold">IFRAME CODE EXAMPLE</span></p>
             <p>
-                <code>
-                &lt;iframe height=&quot;400&quot; width=&quot;654&quot; frameBorder=&quot;0&quot; src=&quot;http://URLTOCHART&quot;&gt;&lt;/iframe&gt;
-                </code>
+                <div class="panel"><pre>&lt;iframe height=&quot;400&quot; width=&quot;654&quot; frameBorder=&quot;0&quot; src=&quot;http://URLTOCHART&quot;&gt;&lt;/iframe&gt;</div>
             </p>
             <p><span style="font-weight: bold">STEPS</span></p>
             <ol>
@@ -111,30 +110,30 @@
                 <p></p>
                 <div class="panel">
                     <pre>// Enter labels for horizontal axis
-        labels : ["January","February","March","April","May","June","July"],
-        datasets : [
-            {
-                fillColor : "rgba(72,99,160,0.5)", /* bar color */
-                strokeColor : "rgba(72,99,160,0.8)", /* bar border color */
-                highlightFill: "rgba(72,99,160,0.75)", /* bar color on hover/click */
-                highlightStroke: "rgba(72,99,160,1)", /* bar border color on hover/click */
-                data : ["1","3","5","7","9","11","13"] /* data */
-            },
-            // copy and paste above code for more bars; last set has no comma
-            {
-                fillColor : "rgba(161,72,99,0.5)",
-                strokeColor : "rgba(161,72,99,0.8)",
-                highlightFill : "rgba(161,72,99,0.75)",
-                highlightStroke : "rgba(161,72,99,1)",
-                data : ["2","4","6","8","10","12","14"]
-            },
-            {
-                fillColor : "rgba(99,161,72,0.5)",
-                strokeColor : "rgba(99,161,72,0.8)",
-                highlightFill : "rgba(99,161,72,0.75)",
-                highlightStroke : "rgba(99,161,72,1)",
-                data : ["3","5","7","9","11","13","15"]
-            }
+    labels : ["January","February","March","April","May","June","July"],
+    datasets : [
+        {
+            fillColor : "rgba(72,99,160,0.5)", /* bar color */
+            strokeColor : "rgba(72,99,160,0.8)", /* bar border color */
+            highlightFill: "rgba(72,99,160,0.75)", /* bar color on hover/click */
+            highlightStroke: "rgba(72,99,160,1)", /* bar border color on hover/click */
+            data : ["1","3","5","7","9","11","13"] /* data */
+        },
+        // copy and paste above code for more bars; last set has no comma
+        {
+            fillColor : "rgba(161,72,99,0.5)",
+            strokeColor : "rgba(161,72,99,0.8)",
+            highlightFill : "rgba(161,72,99,0.75)",
+            highlightStroke : "rgba(161,72,99,1)",
+            data : ["2","4","6","8","10","12","14"]
+        },
+        {
+            fillColor : "rgba(99,161,72,0.5)",
+            strokeColor : "rgba(99,161,72,0.8)",
+            highlightFill : "rgba(99,161,72,0.75)",
+            highlightStroke : "rgba(99,161,72,1)",
+            data : ["3","5","7","9","11","13","15"]
+        }
         ]</pre>
                 </div>
                 </li>
@@ -142,13 +141,10 @@
             </ul>
         </div>
     </div>
-    <div class="row">
-        <div classs="medium-12 columns">
-            <h2 class="section-header" id="table">TABLES</h2>
-        </div>
-    </div>
+
     <div class="row">
         <div class="medium-12 columns">
+            <h2 class="section-header" id="table">TABLES</h2>
             <h3 class="section-label">DataTables</h3>
             <p><span style="font-weight: bold">USE </span>A responsive, sortable, searchable table that updates dynamically from a public-facing Google sheet, based on <a href="http://datatables.net/">DataTables</a> / <a href="http://extras.denverpost.com/frameworks/tables/datatables/example.html">Live example</a></p>
             <p><span style="font-weight: bold">CODE </span><a href="https://github.com/githamm/dpo-tools/tree/master/tables/datatables">GitHub</a></p>
@@ -175,15 +171,15 @@
                     </div>
                 <li>On line 72, change the file name to match the .js file name from step 4<br>
                     <p></p>
-                    <p><code>&lt;script src=&quot;http://extras.denverpost.com/frameworks/tables/datatables/js/example.js&quot;&gt;&lt;/script&gt;</code></p>
+                    <p><div class="panel"><pre>&lt;script src=&quot;http://extras.denverpost.com/frameworks/tables/datatables/js/example.js&quot;&gt;&lt;/script&gt;</div></p>
                 </li>
                 <p></p>
                 <li>Open renamed <span style="font-weight: bold">example.js</span> in a text editor and add your Google sheet's key* between the single quote marks on line 7:<br>
                 <p></p>
-                <code>var spreadsheet_key = '1T0n6-bVZo2lpvL95HejOX9eKwCyH5g6Hc3XX41Yk4Yo';</code><br>
+                <div class="panel"><pre>var spreadsheet_key = '1T0n6-bVZo2lpvL95HejOX9eKwCyH5g6Hc3XX41Yk4Yo';</div><br>
                 <p></p>
                 <p>* Sample spreadsheet URL with key in red:</p>
-                <p>https://docs.google.com/spreadsheets/d/<span style="color: red;">1T0n6-bVZo2lpvL95HejOX9eKwCyH5g6Hc3XX41Yk4Yo</span>/edit#gid=0</p>
+                <div class="panel"><pre>https://docs.google.com/spreadsheets/d/<span style="color: red;">1T0n6-bVZo2lpvL95HejOX9eKwCyH5g6Hc3XX41Yk4Yo</span>/edit#gid=0</pre></div>
                 </li>
                 <p></p>
                 <li>Starting on line 77, change width percentages and add/remove { ... } to match table (note no comma after last { ... }):<br>
@@ -194,7 +190,7 @@
                 </div>
                 </li>
                 <li>Upload both files to the Extras server: <span style="font-weight: bold">frameworks > tables > datatables</span> (.html file) and <span style="font-weight: bold">frameworks > tables > datatables > js</span> (.js file)</li>
-                <li>Table should be at <span style="font-weight: bold">http://extras.denverpost.com/frameworks/tables/datatables/YOURFILENAME.html</span></li>
+                <li>Table should be at <div class="panel"><pre>http://extras.denverpost.com/frameworks/tables/datatables/YOURFILENAME.html</pre></div></li>
             </ol>
         </div>
     </div>
